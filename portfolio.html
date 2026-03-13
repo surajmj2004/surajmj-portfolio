@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>My Portfolio</title>
+
+<style>
+
+html, body{
+height:100%;
+margin:0;
+}
+
+body{
+background: #F0EDCC;
+}
+nav{
+background-color:#02343F;
+padding:15px 40px;
+text-align:right;
+}
+hr {
+    border: none;          
+    height: 2px;          
+    background-color:#02343F; 
+    margin: 10px 0;
+    width: 100%;
+}
+nav a{
+color: #F0EDCC;
+margin:0 15px;
+text-decoration:none;
+font-weight:bold;
+font-size:16px;
+}
+
+ a:hover{
+            color: rgb(200, 231, 101);
+            cursor: pointer;                  
+        }
+.diva{
+background-color:  #F0EDCC;
+display:flex;
+/*align-items:center;*/
+justify-content:space-between;
+padding:60px;
+}
+div{
+    height: 100%;
+}
+.text{
+max-width:500px;
+line-height:1.6;
+color: #02343F;
+}
+.but{
+    background-color: #02343F;
+    color: #F0EDCC;
+    font-weight:lighter;
+    border-radius: 20px;
+    height: fit-content;
+    width: fit-content;
+    padding: 10px;
+    text-decoration: none;
+}
+.but:hover{
+    color: #e1db75;
+    transform: translateY(-5px);
+    cursor: pointer;
+     box-shadow: 0 10px 20px rgba(0,0,0,0.2); 
+}
+.text h1{
+font-size:40px;
+margin-bottom:15px;
+}
+
+.image-container {
+    margin-top: 5%;
+    width: 300px;               
+    height: 400px;             
+    padding: 10px;             
+    background-color: #D34E23; 
+    border-radius: 30px;       
+    display: flex;
+    justify-content:center;
+    align-items: center;
+    box-shadow: 0 4px 12px rgba(23, 23, 23, 0.2);}
+
+.image-container img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;          
+    border-radius: 20px;       
+    border: 5px solid #fff;    
+}
+
+</style>
+</head>
+
+<body>
+
+<nav>
+<a href="portfolio.html">Home</a>
+<a href="about.html">About</a>
+<a href="pro.html">Projects</a>
+<a href="contact.html">Contact</a>
+</nav>
+<hr>
+<div class="diva">
+
+<div class="text">
+<h1>Hello, I am <br> Suraj MJ</h1>
+
+<p>
+Hi, I'm Suraj MJ, a full-stack developer student.  
+I build scalable web applications and love solving
+problems through code.
+</p>
+<a href="pro.html" class="but">view projects</a>
+</div>
+
+<div class="image-container">
+<img src="./sura.jpeg" alt="profile">
+</div>
+<div>
+    
+</div>
+</div>
+</body>
+</html>

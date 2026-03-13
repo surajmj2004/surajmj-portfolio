@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        html, body{
+height:100%;
+margin:0;
+}
+
+body{
+background:rgb(201, 185, 129);
+}
+nav{
+background-color:#4f6136;
+padding:15px 40px;
+text-align:right;
+}
+
+nav a{
+color:rgb(201, 185, 129);
+margin:0 15px;
+text-decoration:none;
+font-weight:bold;
+font-size:16px;
+}
+ a:hover{
+            color: rgb(175, 212, 212);
+            cursor: pointer;                  
+        }
+.container{
+    justify-content:space-around;
+    display: flex;
+    align-items: flex-start;
+    padding: 6%;
+}
+.card{
+    width: 40%;
+    border: .5px solid  rgb(201, 185, 129);
+    border-radius: 5px;
+    background: #4f6136;
+    padding: 35px;
+    text-align: center;
+}
+.card:hover {
+    transform: translateY(-5px); 
+    color: rgb(195, 211, 197);   
+    box-shadow: 0 10px 20px rgba(0,0,0,0.2); 
+    cursor: pointer;  
+                    
+}
+h1{
+    font-weight: bold;
+    text-align: center;
+    color:#2C5F2D;
+    margin-top: 45px;
+    font-size: 55px;
+}
+h2{
+    color:  rgb(201, 185, 129);
+}
+h2:hover{
+    color:azure;
+}
+
+    </style>
+</head>
+<body>
+    <nav>
+        <a href="portfolio.html">Home</a>
+        <a href="about.html">About</a>
+        <a href="pro.html">Projects</a>
+        <a href="contact.html">Contact</a>
+    </nav>
+    <h1>Projects</h1>
+  
+    <div class="container">
+        <div class="card">
+            <h2>Online SmartPhone Store</h2>
+        </div>
+        <div class="card">
+            <h2>Online Room Booking</h2>
+        </div>
+    </div>
+</body>
+</html>

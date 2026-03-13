@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        html, body{ 
+            height:100%;
+            margin:0;
+        }
+        body{
+            background-color: rgb(189, 153, 104);
+        }
+        nav{
+            background-color: rgb(136, 64, 42);
+            text-align: right;
+            padding: 15px 40px;
+            margin-bottom: 15px;
+        }
+        nav a{
+            font-weight: bold;
+            margin:0 15px;
+            text-decoration: none;
+            color: aliceblue;
+
+        }
+        a:hover{
+            color: rgb(200, 231, 101);
+            cursor: pointer;                  
+        }
+        .content{
+            justify-content: space-around;
+            display: flex;
+            align-items: flex-start;
+            padding:40px;
+        }
+      .image img {
+    width: 300px;       
+    height: 300px;
+    border-radius: 50%; 
+    object-fit: cover;  
+    margin-top: 20%;
+}
+        h1{
+            
+            margin-left: 15px;
+        }
+        p{
+            max-width: 700px;
+            line-height: 1.5;
+            margin-left: 15px;
+        }
+    </style>
+</head>
+<body>
+    <nav>
+       <a href="portfolio.html">Home</a>
+        <a href="about.html">About</a>
+        <a href="pro.html">Projects</a>
+        <a href="contact.html">Contact</a>
+    </nav>
+    <div class="content">
+        <div>
+                <h1>About us</h1>
+                <p>Hi! I’m Suraj M.J an Integrated MCA student passionate about technology and software development.
+                I enjoy creating applications that solve real-world problems, exploring areas like web development, 
+                data analytics, and software engineering. My projects combine technical skills with creativity, 
+                aiming to be both functional and user-friendly.</p>
+
+                <p>I actively participate in coding challenges, hackathons, and collaborative projects 
+                to sharpen my skills and stay updated with industry trends. I am eager to learn, 
+                innovate, and contribute to  meaningful projects that make an impact while growing 
+                as a developer.</p>
+                <div>
+                    <h2>Skills</h2>
+                    <ul>
+                        <li><b>Programming Languages:</b> Java, C, C++, Python</li>
+                        <li><b>Web Development:</b> HTML, CSS, JavaScript, ASP.NET</li>
+                        <li><b>Databases:</b> MySQL, MongoDB</li>
+                        <li><b>Other Areas:</b> Problem-solving, Application Development</li>
+                    </ul>
+                </div>
+               
+        </div>
+         <div class="image">
+                    <img src="./sura.jpeg"alt="profile">
+                </div>
+    </div>
+</body>
+</html>
