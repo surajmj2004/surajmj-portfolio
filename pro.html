@@ -1,88 +1,156 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-    <style>
-        html, body{
-height:100%;
-margin:0;
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Projects Portfolio | Suraj MJ</title>
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+<style>
+* { box-sizing: border-box; margin: 0; padding: 0; }
+body {
+    font-family: 'Poppins', sans-serif;
+    background-color: #F8FAFC;
+    color: #0F172A;
+    min-height: 100vh;
 }
-
-body{
-background:rgb(201, 185, 129);
-}
-nav{
-background-color:#4f6136;
-padding:15px 40px;
-text-align:right;
-}
-
-nav a{
-color:rgb(201, 185, 129);
-margin:0 15px;
-text-decoration:none;
-font-weight:bold;
-font-size:16px;
-}
- a:hover{
-            color: rgb(175, 212, 212);
-            cursor: pointer;                  
-        }
-.container{
-    justify-content:space-around;
+nav {
+    background-color: #0F172A;
+    padding: 20px 40px;
     display: flex;
-    align-items: flex-start;
-    padding: 6%;
+    justify-content: flex-end;
+    align-items: center;
 }
-.card{
-    width: 40%;
-    border: .5px solid  rgb(201, 185, 129);
-    border-radius: 5px;
-    background: #4f6136;
-    padding: 35px;
+nav a {
+    color: #F8FAFC;
+    margin-left: 30px;
+    text-decoration: none;
+    font-weight: 500;
+    font-size: 15px;
+}
+nav a:hover, nav a.active { color: #F59E0B; }
+
+.heading-area {
     text-align: center;
+    padding: 60px 20px 20px;
 }
-.card:hover {
-    transform: translateY(-5px); 
-    color: rgb(195, 211, 197);   
-    box-shadow: 0 10px 20px rgba(0,0,0,0.2); 
-    cursor: pointer;  
-                    
+.heading-area h1 { font-size: 40px; font-weight: 700; color: #0F172A; }
+.heading-area p { color: #64748B; margin-top: 10px; font-size: 16px; }
+
+/* Grid Layout for Projects */
+.projects-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+    max-width: 1000px;
+    margin: 0 auto;
+    padding: 40px;
+    gap: 30px;
 }
-h1{
-    font-weight: bold;
-    text-align: center;
-    color:#2C5F2D;
-    margin-top: 45px;
-    font-size: 55px;
+.project-card {
+    background-color: white;
+    border-radius: 16px;
+    overflow: hidden;
+    box-shadow: 0 4px 20px rgba(0,0,0,0.02);
+    border: 1px solid #E2E8F0;
+    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+    display: flex;
+    flex-direction: column;
+    animation: fadeInUp 0.6s ease;
 }
-h2{
-    color:  rgb(201, 185, 129);
+.project-card:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 20px 30px rgba(15,23,42,0.08);
+    border-color: #F59E0B;
 }
-h2:hover{
-    color:azure;
+.project-image-placeholder {
+    background-color: #0F172A;
+    min-height: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #F8FAFC;
+    font-weight: 600;
+    font-size: 18px;
+    border-bottom: 4px solid #F59E0B;
+}
+.project-body { padding: 25px; flex-grow: 1; display: flex; flex-direction: column;}
+.project-date { font-size: 12px; color: #94A3B8; font-weight: 500; text-transform: uppercase; margin-bottom: 6px; }
+.project-body h2 { font-size: 20px; font-weight: 700; color: #0F172A; margin-bottom: 12px; }
+.project-desc { font-size: 14px; color: #475569; line-height: 1.6; margin-bottom: 15px; }
+
+.tech-badges { display: flex; flex-wrap: wrap; gap: 8px; margin-bottom: 20px; }
+.badge { background-color: #F1F5F9; color: #475569; font-size: 12px; padding: 4px 10px; border-radius: 6px; font-weight: 500; }
+
+.metric-box { background-color: #F8FAFC; border-left: 4px solid #F59E0B; padding: 10px 15px; margin-bottom: 20px; border-radius: 0 8px 8px 0; font-size: 13px; color: #1E293B; }
+
+.project-link {
+    margin-top: auto;
+    text-decoration: none;
+    color: #0F172A;
+    font-weight: 600;
+    font-size: 14px;
+    display: inline-flex;
+    align-items: center;
+    transition: color 0.2s;
+}
+.project-link:hover { color: #F59E0B; }
+
+@keyframes fadeInUp {
+    from { opacity: 0; transform: translateY(20px); }
+    to { opacity: 1; transform: translateY(0); }
 }
 
-    </style>
+@media(max-width: 480px) {
+    .projects-grid { grid-template-columns: 1fr; padding: 20px; }
+}
+</style>
 </head>
 <body>
-    <nav>
-        <a href="portfolio.html">Home</a>
-        <a href="about.html">About</a>
-        <a href="pro.html">Projects</a>
-        <a href="contact.html">Contact</a>
-    </nav>
-    <h1>Projects</h1>
-  
-    <div class="container">
-        <div class="card">
-            <h2>Online SmartPhone Store</h2>
-        </div>
-        <div class="card">
-            <h2>Online Room Booking</h2>
+<nav>
+    <a href="portfolio.html">Home</a>
+    <a href="about.html">About & Skills</a>
+    <a href="pro.html" class="active">Projects</a>
+    <a href="contact.html">Experience & Contact</a>
+</nav>
+
+<div class="heading-area">
+    <h1>Proof of Work</h1>
+    <p>Production architectural systems engineered to resolve practical operational challenges.</p>
+</div>
+
+<main class="projects-grid">
+
+
+    <div class="project-card">
+        <div class="project-image-placeholder">E-Commerce Architecture</div>
+        <div class="project-body">
+            <!--<span class="project-date">Nov 2025 - Jan 2026</span>-->
+            <h2>Online Smartphone Store</h2>
+            <p class="project-desc">Developed a real-time online smartphone store with instant product search, live stock availability, and automated order billing.</p>
+            <div class="tech-badges">
+                <span class="badge">ASP.NET</span>
+                <span class="badge">C# Boilerplate</span>
+                <span class="badge">SQL Server</span>
+            </div>
+           <!-- <a href="#" class="project-link">Launch Live Interface →</a>-->
         </div>
     </div>
+
+    <div class="project-card">
+        <div class="project-image-placeholder">Doctor Booking Portal</div>
+        <div class="project-body">
+            <!--<span class="project-date">Aug 2025 - Oct 2025</span>-->
+            <h2>Online Ophthalmology Appointment </h2>
+            <p class="project-desc">Developed a real-time online eye care appointment platform with instant slot selection, doctor availability tracking, and auto-generated invoices.</p>
+             <!--<div class="metric-box">
+             </div>-->
+            <div class="tech-badges">
+                <span class="badge">php</span>
+                <span class="badge">MySQL</span>
+                <span class="badge">HTML,JS</span>
+            </div>
+            <!--<a href="#" class="project-link">Launch Live Interface →</a>-->
+        </div>
+    </div>
+</main>
 </body>
 </html>

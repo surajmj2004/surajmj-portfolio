@@ -3,129 +3,169 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>My Portfolio</title>
-
+<title>Suraj MJ | Portfolio Home</title>
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
 <style>
-
-html, body{
-height:100%;
-margin:0;
-}
-
-body{
-background: #F0EDCC;
-}
-nav{
-background-color:#02343F;
-padding:15px 40px;
-text-align:right;
-}
-hr {
-    border: none;          
-    height: 2px;          
-    background-color:#02343F; 
-    margin: 10px 0;
-    width: 100%;
-}
-nav a{
-color: #F0EDCC;
-margin:0 15px;
-text-decoration:none;
-font-weight:bold;
-font-size:16px;
-}
-
- a:hover{
-            color: rgb(200, 231, 101);
-            cursor: pointer;                  
-        }
-.diva{
-background-color:  #F0EDCC;
-display:flex;
-/*align-items:center;*/
-justify-content:space-between;
-padding:60px;
-}
-div{
-    height: 100%;
-}
-.text{
-max-width:500px;
-line-height:1.6;
-color: #02343F;
-}
-.but{
-    background-color: #02343F;
-    color: #F0EDCC;
-    font-weight:lighter;
-    border-radius: 20px;
-    height: fit-content;
-    width: fit-content;
-    padding: 10px;
-    text-decoration: none;
-}
-.but:hover{
-    color: #e1db75;
-    transform: translateY(-5px);
-    cursor: pointer;
-     box-shadow: 0 10px 20px rgba(0,0,0,0.2); 
-}
-.text h1{
-font-size:40px;
-margin-bottom:15px;
-}
-
-.image-container {
-    margin-top: 5%;
-    width: 300px;               
-    height: 400px;             
-    padding: 10px;             
-    background-color: #D34E23; 
-    border-radius: 30px;       
+* { box-sizing: border-box; margin: 0; padding: 0; }
+body {
+    font-family: 'Poppins', sans-serif;
+    background-color: #F8FAFC;
+    color: #0F172A;
+    min-height: 100vh;
     display: flex;
-    justify-content:center;
+    flex-direction: column;
+    overflow-x: hidden;
+}
+/* Navigation */
+nav {
+    background-color: #0F172A;
+    padding: 20px 40px;
+    display: flex;
+    justify-content: flex-end;
     align-items: center;
-    box-shadow: 0 4px 12px rgba(23, 23, 23, 0.2);}
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    box-shadow: 0 4px 6px -1px rgba(0,0,0,0.1);
+}
+nav a {
+    color: #F8FAFC;
+    margin-left: 30px;
+    text-decoration: none;
+    font-weight: 500;
+    font-size: 15px;
+    transition: color 0.3s ease;
+}
+nav a:hover, nav a.active { color: #F59E0B; }
 
-.image-container img {
+/* Hero Wrapper */
+.hero-wrapper {
+    display: flex;
+    max-width: 1200px;
+    margin: auto;
+    padding: 60px 40px;
+    align-items: center;
+    justify-content: space-between;
+    gap: 60px;
+    flex-grow: 1;
+}
+.text-section {
+    max-width: 600px;
+    animation: fadeInUp 0.8s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+}
+.tagline {
+    background-color: #FEF3C7;
+    color: #D97706;
+    padding: 6px 16px;
+    border-radius: 20px;
+    font-size: 14px;
+    font-weight: 600;
+    display: inline-block;
+    margin-bottom: 20px;
+}
+.text-section h1 {
+    font-size: 48px;
+    font-weight: 700;
+    line-height: 1.2;
+    color: #0F172A;
+    margin-bottom: 15px;
+}
+.text-section h1 span { color: #F59E0B; }
+.one-liner {
+    font-size: 18px;
+    color: #475569;
+    line-height: 1.6;
+    margin-bottom: 35px;
+}
+.action-buttons {
+    display: flex;
+    gap: 15px;
+    flex-wrap: wrap;
+    margin-bottom: 35px;
+}
+.btn {
+    padding: 12px 28px;
+    border-radius: 8px;
+    font-weight: 500;
+    text-decoration: none;
+    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+    font-size: 15px;
+}
+.btn-primary { background-color: #0F172A; color: #F8FAFC; }
+.btn-primary:hover { background-color: #1E293B; transform: translateY(-3px); box-shadow: 0 10px 20px rgba(15,23,42,0.15); }
+.btn-secondary { background-color: transparent; color: #0F172A; border: 2px solid #0F172A; }
+.btn-secondary:hover { background-color: #0F172A; color: #F8FAFC; transform: translateY(-3px); }
+
+.social-links { display: flex; gap: 20px; }
+.social-links a { color: #64748B; font-weight: 500; text-decoration: none; transition: color 0.2s; font-size: 14px; }
+.social-links a:hover { color: #F59E0B; }
+
+/* Image Container */
+.image-box {
+    width: 340px;
+    height: 440px;
+    background-color: #F59E0B;
+    border-radius: 24px;
+    padding: 12px;
+    box-shadow: 0 20px 40px rgba(245,158,11,0.15);
+    animation: scaleIn 0.8s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+}
+.image-box img {
     width: 100%;
     height: 100%;
-    object-fit: cover;          
-    border-radius: 20px;       
-    border: 5px solid #fff;    
+    object-fit: cover;
+    border-radius: 16px;
+    border: 4px solid #F8FAFC;
 }
 
+/* Animations */
+@keyframes fadeInUp {
+    from { opacity: 0; transform: translateY(30px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+@keyframes scaleIn {
+    from { opacity: 0; transform: scale(0.9); }
+    to { opacity: 1; transform: scale(1); }
+}
+
+/* Mobile Styling */
+@media (max-width: 768px) {
+    nav { padding: 15px 20px; justify-content: center; }
+    nav a { margin: 0 10px; font-size: 14px; }
+    .hero-wrapper { flex-direction: column-reverse; text-align: center; padding: 40px 20px; gap: 40px; }
+    .text-section h1 { font-size: 36px; }
+    .action-buttons { justify-content: center; }
+    .social-links { justify-content: center; }
+    .image-box { width: 280px; height: 360px; }
+}
 </style>
 </head>
-
 <body>
-
 <nav>
-<a href="portfolio.html">Home</a>
-<a href="about.html">About</a>
-<a href="pro.html">Projects</a>
-<a href="contact.html">Contact</a>
+    <a href="portfolio.html" class="active">Home</a>
+    <a href="about.html">About & Skills</a>
+    <a href="pro.html">Projects</a>
+    <a href="contact.html">Experience & Contact</a>
 </nav>
-<hr>
-<div class="diva">
-
-<div class="text">
-<h1>Hello, I am <br> Suraj MJ</h1>
-
-<p>
-Hi, I'm Suraj MJ, a full-stack developer student.  
-I build scalable web applications and love solving
-problems through code.
-</p>
-<a href="pro.html" class="but">view projects</a>
-</div>
-
-<div class="image-container">
-<img src="./sura.jpeg" alt="profile">
-</div>
-<div>
-    
-</div>
-</div>
+<main class="hero-wrapper">
+    <div class="text-section">
+        <span class="tagline">IMCA Student | Aspiring Web Developer | Creative Thinker</span>
+        <h1>Hello, I am <br><span>Suraj MJ</span></h1>
+        <p class="one-liner">"I design and build websites that solve real problems"</p>
+        <div class="action-buttons">
+            
+            <a href="pro.html" class="btn btn-primary">View Projects</a>
+            <a href="contact.html" class="btn btn-secondary">Contact Me</a>
+        </div>
+        <div class="social-links">
+            <a href="www.linkedin.com/in/suraj-m-j-3605a3398">LinkedIn</a>
+            <a href="https://github.com/surajmj2004">GitHub</a>
+            <a href="mailto:surajmj@depaul.edu.in">Email</a>
+        </div>
+    </div>
+    <div class="image-box">
+        <img src="./sura.jpeg" alt="Suraj MJ Portrait">
+    </div>
+</main>
 </body>
 </html>
